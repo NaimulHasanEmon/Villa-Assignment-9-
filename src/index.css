@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+.ubuntu-regular {
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+  }
+  
+  .ubuntu-medium {
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+  }
+  
+  .ubuntu-bold {
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+  }
+  
+  .footer-text-regular {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+  }
+  
+  .footer-text-bold {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 700;
+  }
+
+  .nav-options {
+    font-family: "Playwrite AU SA", serif;
+  }
