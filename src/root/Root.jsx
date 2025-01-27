@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 
 const Root = () => {
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="xl:max-w-7xl lg:max-w-[950px] mx-auto">
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>

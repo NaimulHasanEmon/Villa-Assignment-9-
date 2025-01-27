@@ -39,13 +39,13 @@ const Slider = ({ sliderInfo }) => {
               alt={slide.title}
             />
             <div
-              className={`absolute bottom-20 left-20 text-5xl text-white z-50 pr-[500px] slide-info-bold ${
+              className={`absolute bottom-20 left-20 lg:text-3xl xl:text-5xl text-white z-50 pr-[500px] slide-info-bold ${
                 currentSlide === idx ? "animate-slide-up" : ""
               }`}
             >
               <p>{slide.info}</p>
               <div className="relative mt-10">
-                <Link to='' className='pl-4 text-xl button-exploreMore w-52 flex items-center gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'>
+                <Link to='' className='pl-4 lg:text-lg xl:text-xl button-exploreMore lg:w-48 xl:w-52 flex items-center gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'>
                   <span className='py-1'>Explore More</span>
                   <div className="text-teal-600 mb-1">
                     <FaLocationArrow />
