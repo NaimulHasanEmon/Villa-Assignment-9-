@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
+import logo from "/Image/Logo&FavIcon/Logo.jpg";
 
 const Header = () => {
   const navLinks = (
@@ -44,6 +45,14 @@ const Header = () => {
           Contact Us
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to='/errorTest'
+          className='nav-options text-lg hover:text-teal-500 hover:bg-white'
+        >
+          Error Page
+        </NavLink>
+      </li>
     </>
   );
 
@@ -75,7 +84,18 @@ const Header = () => {
               {navLinks}
             </ul>
           </div>
-          <a className='btn btn-ghost text-2xl uppercase font-bold'>Villa</a>
+          <div className='flex items-center'>
+            <div className='w-20'>
+              <Link to='/'>
+                <img src={logo} alt='Logo' />
+              </Link>
+            </div>
+            <div>
+              <Link to='/' className='text-2xl uppercase font-bold'>
+                Villa
+              </Link>
+            </div>
+          </div>
         </div>
         <div className='navbar-center hidden lg:flex'>
           <ul className='menu menu-horizontal px-1'>{navLinks}</ul>

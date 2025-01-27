@@ -5,10 +5,12 @@ import Properties from "../components/Shared/Properties/Properties";
 import Agents from "../components/Shared/Agents/Agents";
 import About from "../components/Shared/About/About";
 import Contact from "../components/Shared/Contact/Contact";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const Routes = createBrowserRouter([
   {
     path: "/",
+    errorElement: <ErrorPage></ErrorPage>,
     element: <Root></Root>,
     children: [
       {

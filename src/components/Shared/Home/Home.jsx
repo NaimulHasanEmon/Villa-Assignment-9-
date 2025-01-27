@@ -1,12 +1,14 @@
 import { useLoaderData } from "react-router-dom";
-import Banner from "../Banner/Banner";
+import Slider from "../Slider/Slider";
 
 const Home = () => {
-  const bannerInfo = useLoaderData();
+  const sliderInfo = useLoaderData();
 
   return (
     <div>
-      <Banner bannerInfo={bannerInfo}></Banner>
+      <div className="my-10">
+        <Slider sliderInfo={sliderInfo}></Slider>
+      </div>
     </div>
   );
 };

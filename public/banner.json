@@ -1,33 +1,37 @@
 [
-    {
+  {
       "id": 1,
-      "image": "../public/Image/BannerImages/BannerImage1.png",
+      "image": "../public/Image/BannerImages/BannerImage1.jpg",
       "info": "Modern 2-bedroom apartment with a stunning city view. Located in the heart of downtown, close to shopping centers."
-    },
-    {
+  },
+  {
       "id": 2,
       "image": "../public/Image/BannerImages/BannerImage2.jpg",
       "info": "Spacious 3-bedroom apartment with an open-plan living area. Features include a balcony and high-end appliances."
-    },
-    {
+  },
+  {
       "id": 3,
       "image": "../public/Image/BannerImages/BannerImage3.jpg",
       "info": "Cozy 1-bedroom apartment ideal for young professionals. Recently renovated with modern finishes and an excellent location."
-    },
-    {
+  },
+  {
       "id": 4,
       "image": "../public/Image/BannerImages/BannerImage4.jpg",
       "info": "Luxury penthouse with panoramic views. 4 bedrooms, 3 bathrooms, and an expansive rooftop terrace."
-    },
-    {
+  },
+  {
       "id": 5,
-      "image": "../public/Image/BannerImages/BannerImage5.jpg",
+      "image": "../public/Image/BannerImages/BannerImage5.png",
       "info": "Elegant 2-bedroom apartment with a private garden. Quiet neighborhood and within walking distance of public transportation."
-    },
-    {
+  },
+  {
       "id": 6,
       "image": "../public/Image/BannerImages/BannerImage6.jpg",
       "info": "Stylish studio apartment with a minimalist design. Perfect for those who value modern living in a vibrant community."
-    }
-  ]
-  
+  },
+  {
+      "id": 7,
+      "image": "../public/Image/BannerImages/BannerImage7.jpg",
+      "info": "Charming 3-bedroom house with a spacious backyard. Ideal for families, located near excellent schools and parks."
+  }
+]
