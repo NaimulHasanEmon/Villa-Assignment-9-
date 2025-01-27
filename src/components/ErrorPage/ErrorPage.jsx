@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-// import error404 from "../../../public/Image/Illustrations/404.svg";
-// import crossError from "../../../public/Image/Illustrations/CrossError.svg";
-// import errorMatrix1 from '../../../public/Image/ErrorPage/ErrorMatrix1.png';
-import errorMatrix2 from "../../../public/Image/ErrorPage/ErrorMatrix2.jpg";
+import errorMatrix from "../../../public/Image/ErrorPage/ErrorMatrix.jpg";
 // import Header from "../Header/Header";
 
 const ErrorPage = () => {
@@ -11,18 +8,10 @@ const ErrorPage = () => {
       {/* <Header></Header> */}
       <div className='relative flex flex-col items-center bg-black justify-center'>
         {/* h-[633px] */}
-        {/* <div className='flex justify-center'>
-          <div>
-            <img className='h-96' src={error404} alt='' />
-          </div>
-          <div>
-            <img className='h-96' src={crossError} alt='' />
-          </div>
-        </div> */}
         <div className=''>
           {/* Image */}
           <div className='flex justify-center'>
-            <img src={errorMatrix2} alt='' className='h-screen' />
+            <img src={errorMatrix} alt='' className='h-screen' />
           </div>
           {/* Buttons */}
           <div className='flex gap-80 fixed bottom-[160px] text-xl text-white uppercase font-bold left-[450px]'>
