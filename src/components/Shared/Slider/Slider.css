@@ -1,0 +1,61 @@
+.button-exploreMore {
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  background: #ffd401;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button-exploreMore:after {
+  height: 100%;
+  background: #27edb8;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.button-exploreMore:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.button-exploreMore span {
+  color: #038d6a;
+  font-size: 1.125em;
+  font-weight: 700;
+  z-index: 20;
+  transition: all 0.3s ease-in;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-up {
+    animation: slideInFromBottom 1s ease-in-out;
+  }
+  
