@@ -8,7 +8,7 @@ const Header = () => {
       <li>
         <NavLink
           to=''
-          className='nav-options text-lg hover:text-teal-500 hover:bg-white'
+          className='hover:text-teal-500 hover:bg-white'
         >
           Home
         </NavLink>
@@ -16,7 +16,7 @@ const Header = () => {
       <li>
         <NavLink
           to='/properties'
-          className='nav-options text-lg hover:text-teal-500 hover:bg-white'
+          className='hover:text-teal-500 hover:bg-white'
         >
           Properties
         </NavLink>
@@ -24,7 +24,7 @@ const Header = () => {
       <li>
         <NavLink
           to='/agents'
-          className='nav-options text-lg hover:text-teal-500 hover:bg-white'
+          className='hover:text-teal-500 hover:bg-white'
         >
           Agents
         </NavLink>
@@ -32,7 +32,7 @@ const Header = () => {
       <li>
         <NavLink
           to='/about'
-          className='nav-options text-lg hover:text-teal-500 hover:bg-white'
+          className='hover:text-teal-500 hover:bg-white'
         >
           About Us
         </NavLink>
@@ -40,7 +40,7 @@ const Header = () => {
       <li>
         <NavLink
           to='/contact'
-          className='nav-options text-lg hover:text-teal-500 hover:bg-white'
+          className='hover:text-teal-500 hover:bg-white'
         >
           Contact Us
         </NavLink>
@@ -48,7 +48,7 @@ const Header = () => {
       <li>
         <NavLink
           to='/errorTest'
-          className='nav-options text-lg hover:text-teal-500 hover:bg-white'
+          className='hover:text-teal-500 hover:bg-white'
         >
           Error Page
         </NavLink>
@@ -58,7 +58,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='navbar bg-base-100 shadow-sm'>
+      <div className='navbar bg-base-100 border-b-2 my-5'>
         <div className='navbar-start'>
           <div className='dropdown'>
             <div tabIndex={0} role='button' className='btn btn-ghost lg:hidden'>
@@ -79,7 +79,7 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className='menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow'
+              className='text-xl nav-options menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow'
             >
               {navLinks}
             </ul>
@@ -98,7 +98,7 @@ const Header = () => {
           </div>
         </div>
         <div className='navbar-center hidden lg:flex'>
-          <ul className='menu menu-horizontal px-1'>{navLinks}</ul>
+          <ul className='flex gap-6 px-1 nav-options text-[22px]'>{navLinks}</ul>
         </div>
         <div className='navbar-end'>
           <Link to='/' className='button-login'>

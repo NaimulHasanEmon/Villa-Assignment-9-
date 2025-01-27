@@ -7,19 +7,25 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Slider = ({ sliderInfo }) => {
   return (
-    <div>
+    <div className='relative'>
       <AutoplaySlider
         className='h-[633px]'
         play={true}
-        autoPlaySpeed={3000}
+        interval={5000} // Interval between slides
         infinite={true}
         bullets={false} // Add this line to remove the dots
+        buttons={false} // Add this line to remove the arrows
       >
-        {sliderInfo.map((slide, index) => (
-          <div key={index}>
-            <img src={slide.image} className="h-[633] w-full object-cover" alt={slide.title} />
-            <h3>{slide.title}</h3>
-            <p>{slide.description}</p>
+        {sliderInfo.map((slide, idx) => (
+          <div key={idx}>
+            <img
+              src={slide.image}
+              className='h-[633] opacity-50 w-full object-cover'
+              alt={slide.title}
+            />
+            <div className='absolute bottom-36 left-20 text-4xl text-white z-50 slide-info pr-[500px]'>
+              <p>{slide.info}</p>
+            </div>
           </div>
         ))}
       </AutoplaySlider>
