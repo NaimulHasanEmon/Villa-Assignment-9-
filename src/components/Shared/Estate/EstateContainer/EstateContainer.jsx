@@ -12,11 +12,11 @@ const EstateContainer = () => {
 
   return (
     <div className="my-20">
-      <div className="flex justify-center text-5xl mb-5 slide-info-bold">
+      <div className="flex justify-center text-3xl lg:text-5xl mb-5 slide-info-bold">
         <p>Featured Commercial Properties</p>
       </div>
       <div className='p-1'>
-          <div className='grid grid-cols-3 gap-y-5'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
             {commercialData.map((commData, idx) => (
               <EstateCard key={idx} commData={commData}></EstateCard>
             ))}
