@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import EstateCard from "../EstateCard/EstateCard";
-import { Link } from "react-router-dom";
 
 const EstateContainer = () => {
   const [commercialData, setCommercialData] = useState([]);
@@ -12,21 +11,16 @@ const EstateContainer = () => {
   }, []);
 
   return (
-    <div>
-      <p>Estate Container</p>
-      <div className='card border shadow-xl mx-4 p-4'>
-        <div className='bg-base-200 flex justify-center items-center min-h-48 rounded-xl mb-3'>
-          <img className='h-36' src={""} alt={""} />
-        </div>
-        <div className=''>
-          <div className='border-b-2 border-dashed pb-2'>
-            <div className='grid gap-2 grid-cols-2'>
-              {commercialData.map((commData, idx) => 
-                <EstateCard key={idx} commData={commData}></EstateCard>
-              )}
-            </div>
+    <div className="my-20">
+      <div className="flex justify-center text-5xl mb-5 slide-info-bold">
+        <p>Featured Commercial Properties</p>
+      </div>
+      <div className='p-1'>
+          <div className='grid grid-cols-3 gap-y-5'>
+            {commercialData.map((commData, idx) => (
+              <EstateCard key={idx} commData={commData}></EstateCard>
+            ))}
           </div>
-        </div>
       </div>
     </div>
   );

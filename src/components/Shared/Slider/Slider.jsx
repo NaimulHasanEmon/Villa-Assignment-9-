@@ -44,8 +44,8 @@ const Slider = ({ sliderInfo }) => {
               }`}
             >
               <p>{slide.info}</p>
-              <div className="relative mt-10 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out">
-                <Link to='' className='pl-4 text-xl button-exploreMore w-52 flex items-center gap-2'>
+              <div className="relative mt-10">
+                <Link to='' className='pl-4 text-xl button-exploreMore w-52 flex items-center gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'>
                   <span className='py-1'>Explore More</span>
                   <div className="text-teal-600 mb-1">
                     <FaLocationArrow />
