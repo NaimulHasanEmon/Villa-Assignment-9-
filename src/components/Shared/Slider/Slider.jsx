@@ -43,7 +43,7 @@ const Slider = ({ sliderInfo }) => {
                 currentSlide === idx ? "animate-slide-up" : ""
               }`}
             >
-              <p className='text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl slide-info-bold'>
+              <p className='text-sm sm:text-lg md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-5xl slide-info-bold'>
                 {slide.info}
               </p>
               <div className="relative mt-5 sm:mt-10">

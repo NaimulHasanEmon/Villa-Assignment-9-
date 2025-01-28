@@ -20,15 +20,15 @@ const EstateCard = ({ commData }) => {
     image,
   } = commData;
   return (
-    <div className='relative card shadow-2xl mx-2 p-4 h-full'>
+    <div className='relative card shadow-2xl xl:mx-2 p-4 md:p-2 h-full'>
       <div className='bg-base-200 flex justify-center items-center rounded-xl mb-3'>
         <img className='rounded-t-xl mb-1 w-full h-48 object-cover' src={image} alt={estate_title} />
       </div>
       <div className='text-xl lg:text-2xl font-bold'>
         <p>{estate_title}</p>
       </div>
-      <div className='flex flex-col lg:flex-row gap-5 justify-between'>
-        <div className='text-base lg:text-lg'>
+      <div className='flex flex-col py-2 lg:flex-row gap-5 justify-between'>
+        <div>
           <p>{description}</p>
         </div>
         <p className='font-semibold badge badge-dash badge-info'>
@@ -36,7 +36,7 @@ const EstateCard = ({ commData }) => {
         </p>
       </div>
       {/* Rent / Sale */}
-      <div className='absolute bottom-128 left-6 badge text-base lg:text-lg py-4 badge-success'>
+      <div className='absolute top-6 left-6 badge text-base lg:text-lg py-4 badge-success'>
         <svg
           className='size-[1em]'
           xmlns='http://www.w3.org/2000/svg'
@@ -89,7 +89,7 @@ const EstateCard = ({ commData }) => {
       </div>
 
       {/* Facilities */}
-      <div className='grid grid-cols-2 gap-2 my-2'>
+      <div className='grid grid-cols-2 gap-1 xl:gap-2 my-2'>
         {facilities.map((facility, idx) => (
           <div key={idx} className='badge badge-soft badge-accent font-semibold'>
             {facility}
@@ -101,10 +101,10 @@ const EstateCard = ({ commData }) => {
       <div className='flex-grow'></div>
 
       {/* View Property Button */}
-      <div className='relative mt-5 my-3'>
+      <div className='relative xl:mt-5 my-3'>
         <Link
           to={`/property/${id}`}
-          className='pl-4 text-lg lg:text-xl button-viewProperty w-full lg:w-52 flex items-center gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'
+          className='pl-4 text-lg lg:text-xl button-viewProperty w-full sm:w-52 flex items-center justify-center md:justify-start gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'
         >
           <span className='py-1'>View Property</span>
           <div className='text-[#186650] mb-1'>
