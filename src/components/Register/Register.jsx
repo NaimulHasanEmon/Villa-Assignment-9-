@@ -8,7 +8,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 // import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -27,6 +27,28 @@ const Register = () => {
         console.log(error.message);
       });
   };
+
+  // With Google
+  const handleLoginWithGoogle = () => {
+    loginWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  // With Github
+  const handleLogInGitHub = () => {
+    loginWithGithub()
+     .then((result) => {
+        console.log(result.user);
+      })
+     .catch((error) => {
+        console.log(error.message);
+      });
+  }
 
   return (
     <div className='flex flex-col my-8'>
@@ -163,12 +185,17 @@ const Register = () => {
             <div>
               <div className='flex gap-3'>
                 {/* Login with google */}
-                <button className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
+                <button
+                  onClick={() => handleLoginWithGoogle()}
+                  className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'
+                >
                   <FcGoogle className='text-xl' />
                 </button>
 
                 {/* Login with Github */}
-                <button className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
+                <button
+                onClick={() => handleLogInGitHub()}
+                className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
                   <DiGithubBadge className='text-2xl' />
                 </button>
 
