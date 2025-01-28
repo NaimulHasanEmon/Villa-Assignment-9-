@@ -1,15 +1,29 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
 import logo from "/Image/Logo&FavIcon/Logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast("Logout successful");
+        // console.log("Logout successful");
+      })
+      .catch((error) => {
+        toast.error("Logout failed because of ", error);
+        // console.log(error.message);
+      });
+  };
+
   const navLinks = (
     <>
       <li>
-        <NavLink
-          to=''
-          className='hover:text-teal-500 hover:bg-white'
-        >
+        <NavLink to='' className='hover:text-teal-500 hover:bg-white'>
           Home
         </NavLink>
       </li>
@@ -22,34 +36,22 @@ const Header = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to='/agents'
-          className='hover:text-teal-500 hover:bg-white'
-        >
+        <NavLink to='/agents' className='hover:text-teal-500 hover:bg-white'>
           Agents
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to='/about'
-          className='hover:text-teal-500 hover:bg-white'
-        >
+        <NavLink to='/about' className='hover:text-teal-500 hover:bg-white'>
           About Us
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to='/contact'
-          className='hover:text-teal-500 hover:bg-white'
-        >
+        <NavLink to='/contact' className='hover:text-teal-500 hover:bg-white'>
           Contact Us
         </NavLink>
       </li>
       <li>
-        <NavLink
-          to='/errorTest'
-          className='hover:text-teal-500 hover:bg-white'
-        >
+        <NavLink to='/errorTest' className='hover:text-teal-500 hover:bg-white'>
           Error Page
         </NavLink>
       </li>
@@ -98,14 +100,31 @@ const Header = () => {
           </div>
         </div>
         <div className='navbar-center hidden lg:flex'>
-          <ul className='flex gap-6 px-1 nav-options text-[22px]'>{navLinks}</ul>
+          <ul className='flex gap-6 px-1 nav-options text-[22px]'>
+            {navLinks}
+          </ul>
         </div>
         <div className='navbar-end'>
-          <Link to='/' className='button-login'>
-            <span>Login</span>
-          </Link>
+          {user ? (
+            <>
+              <Link
+                to='/'
+                onClick={handleLogOut}
+                className='button-login'
+              >
+                <span>Logout</span>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to='/login' className='button-login'>
+                <span>Login</span>
+              </Link>
+            </>
+          )}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

@@ -6,6 +6,9 @@ import Agents from "../components/Shared/Agents/Agents";
 import About from "../components/Shared/About/About";
 import Contact from "../components/Shared/Contact/Contact";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import PropertyDetails from "../components/Shared/PropertyDetails/PropertyDetails";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
 const Routes = createBrowserRouter([
   {
@@ -15,8 +18,16 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch('/slider.json'),
+        loader: () => fetch("/slider.json"),
         element: <Home></Home>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/properties",
@@ -33,6 +44,10 @@ const Routes = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/property/:id",
+        element: <PropertyDetails></PropertyDetails>,
       },
     ],
   },
