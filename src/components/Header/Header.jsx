@@ -101,7 +101,7 @@ const Header = () => {
             </div>
             <div>
               <Link to='/' className='text-2xl uppercase font-bold'>
-                Villa
+                Elara&apos;Villa
               </Link>
             </div>
           </div>
