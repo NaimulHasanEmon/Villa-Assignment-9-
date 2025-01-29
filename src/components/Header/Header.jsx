@@ -28,19 +28,30 @@ const Header = () => {
           Home
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to='/properties'
-          className='hover:text-teal-500 hover:bg-white'
-        >
-          Properties
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/agents' className='hover:text-teal-500 hover:bg-white'>
-          Agents
-        </NavLink>
-      </li>
+      {user && (
+        <>
+          <li>
+            <NavLink
+              to='/properties'
+              className='hover:text-teal-500 hover:bg-white'
+            >
+              Properties
+            </NavLink>
+          </li>
+        </>
+      )}
+      {user && (
+        <>
+          <li>
+            <NavLink
+              to='/agents'
+              className='hover:text-teal-500 hover:bg-white'
+            >
+              Agents
+            </NavLink>
+          </li>
+        </>
+      )}
       <li>
         <NavLink to='/about' className='hover:text-teal-500 hover:bg-white'>
           About Us
@@ -49,11 +60,6 @@ const Header = () => {
       <li>
         <NavLink to='/contact' className='hover:text-teal-500 hover:bg-white'>
           Contact Us
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/errorTest' className='hover:text-teal-500 hover:bg-white'>
-          Error Page
         </NavLink>
       </li>
     </>

@@ -107,14 +107,17 @@ const PropertyDetails = () => {
               <FaMoneyBillAlt />
             </div>
             <p className='text-5xl pb-1'>
-              {price}
-              <span>
-                {status === "rent" && (
-                  <>
-                    /<span className='text-3xl font-semibold'>month</span>
-                  </>
-                )}
-              </span>
+              {price.includes("/") ? (
+                <>
+                  {price.split("/")[0]}
+                  <span className='text-5xl'>/</span>
+                  <span className='text-3xl font-semibold'>
+                    {price.split("/").slice(1).join("/")}
+                  </span>
+                </>
+              ) : (
+                price
+              )}
             </p>
           </div>
         </div>
@@ -182,7 +185,7 @@ const PropertyDetails = () => {
           <p className='text-[28px] font-bold mb-2'>Property Description</p>
         </div>
         <div>
-          <p className="text-lg">{description_detail}</p>
+          <p className='text-lg'>{description_detail}</p>
         </div>
       </div>
     </div>

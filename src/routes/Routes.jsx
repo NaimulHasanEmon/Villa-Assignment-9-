@@ -32,11 +32,19 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/properties",
-        element: <Properties></Properties>,
+        element: (
+          <PrivateRoutes>
+            <Properties></Properties>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/agents",
-        element: <Agents></Agents>,
+        element: (
+          <PrivateRoutes>
+            <Agents></Agents>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/about",
@@ -51,7 +59,7 @@ const Routes = createBrowserRouter([
         loader: () => fetch("/commercial.json"),
         element: (
           <PrivateRoutes>
-            <PropertyDetails></PropertyDetails>
+            <PropertyDetails></PropertyDetails>,
           </PrivateRoutes>
         ),
       },

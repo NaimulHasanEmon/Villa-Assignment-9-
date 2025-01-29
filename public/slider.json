@@ -1,37 +1,37 @@
 [
-  {
+    {
       "id": 1,
       "image": "../public/Image/BannerImages/BannerImage1.jpg",
-      "info": "Modern 2-bedroom apartment with a stunning city view. Located in the heart of downtown, close to shopping centers."
-  },
-  {
+      "info": "Historic Edwardian boathouse on Ullswater Lake. Grade II listed UNESCO World Heritage Site with 2,150 sq ft event space and lakeside terrace."
+    },
+    {
       "id": 2,
       "image": "../public/Image/BannerImages/BannerImage2.jpg",
-      "info": "Spacious 3-bedroom apartment with an open-plan living area. Features include a balcony and high-end appliances."
-  },
-  {
+      "info": "LBBW Tower Stuttgart - 22-story banking headquarters with Class A office space, helipad access, and DGNB Gold certified sustainability features."
+    },
+    {
       "id": 3,
       "image": "../public/Image/BannerImages/BannerImage3.jpg",
-      "info": "Cozy 1-bedroom apartment ideal for young professionals. Recently renovated with modern finishes and an excellent location."
-  },
-  {
+      "info": "Lake Geneva luxury retail space on Quai Gustave-Ador. 650 sq m premium shopping unit with panoramic lake views and 24/7 security."
+    },
+    {
       "id": 4,
       "image": "../public/Image/BannerImages/BannerImage4.jpg",
-      "info": "Luxury penthouse with panoramic views. 4 bedrooms, 3 bathrooms, and an expansive rooftop terrace."
-  },
-  {
+      "info": "University of Graz Historical Building - Baroque-style 18th-century academic complex with vaulted ceilings and UNESCO City of Design status."
+    },
+    {
       "id": 5,
       "image": "../public/Image/BannerImages/BannerImage5.jpg",
-      "info": "Elegant 2-bedroom apartment with a private garden. Quiet neighborhood and within walking distance of public transportation."
-  },
-  {
+      "info": "Austin Luxury Realty HQ - Modern 3,500 sq ft brokerage office in Frost Bank Tower featuring smart building systems and rooftop terrace."
+    },
+    {
       "id": 6,
       "image": "../public/Image/BannerImages/BannerImage6.jpg",
-      "info": "Stylish studio apartment with a minimalist design. Perfect for those who value modern living in a vibrant community."
-  },
-  {
+      "info": "Grafental Industrial Complex - 8,500 sq m manufacturing facility with 10-ton crane capacity, rail access, and Industry 4.0 automation."
+    },
+    {
       "id": 7,
       "image": "../public/Image/BannerImages/BannerImage7.jpg",
-      "info": "Charming 3-bedroom house with a spacious backyard. Ideal for families, located near excellent schools and parks."
-  }
-]
+      "info": "Villa Courbe by SAOTA - Architectural masterpiece on Lake Geneva with cantilevered design, infinity pool, and commercial event license."
+    }
+  ]

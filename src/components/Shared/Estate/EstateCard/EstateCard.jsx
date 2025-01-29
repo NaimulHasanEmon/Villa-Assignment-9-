@@ -75,13 +75,13 @@ const EstateCard = ({ commData }) => {
         </div>
         <p>
           {price}
-          <span>
+          {/* <span>
             {status === "rent" && (
               <>
                 /<span>month</span>
               </>
             )}
-          </span>
+          </span> */}
         </p>
       </div>
       {/* Area */}

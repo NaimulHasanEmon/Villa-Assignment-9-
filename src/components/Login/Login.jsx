@@ -24,8 +24,7 @@ const Login = () => {
     const password = form.get("password");
 
     loginWithEmailAndPassword(email, password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
         navigate(location?.state ? location.state : "/");
         e.target.reset();
       })
@@ -37,9 +36,8 @@ const Login = () => {
   // With Google
   const handleLoginWithGoogle = () => {
     loginWithGoogle()
-      .then((result) => {
-        console.log(result.user);
-        console.log(result.user.photoURL);
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -49,8 +47,8 @@ const Login = () => {
   // With Github
   const handleLogInGitHub = () => {
     loginWithGithub()
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -60,8 +58,8 @@ const Login = () => {
   // With Facebook
   const handleLogInWithFacebook = () => {
     loginWithFacebook()
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.log(error.message);
