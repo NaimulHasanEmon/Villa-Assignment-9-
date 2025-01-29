@@ -9,10 +9,6 @@ import { RxAvatar } from "react-icons/rx";
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
 
-  if (user) {
-    console.log(user);
-  }
-
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -121,7 +117,15 @@ const Header = () => {
           {/* className={`${
               user.photoURL ? `title:${user.name}` : "hover:Name Undefined"
             }`} */}
-          <div title={`${user.photoURL ? `${user.displayName}` : "Name Undefined"}`}>
+          <div
+            title={`${
+              user
+                ? user.photoURL
+                  ? user.displayName
+                  : "User Name Undefined"
+                : "User not logged in"
+            }`}
+          >
             {user ? (
               user.photoURL ? (
                 <>
