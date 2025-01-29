@@ -3,6 +3,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { IoLocationSharp } from "react-icons/io5";
 import { PiLineSegmentsBold } from "react-icons/pi";
+import { TbChartAreaFilled } from "react-icons/tb";
+import { FaMoneyBillAlt } from "react-icons/fa";
 
 const PropertyDetails = () => {
   const propertyItem = useLoaderData();
@@ -37,31 +39,78 @@ const PropertyDetails = () => {
 
   return (
     <div>
-      <div>
-        <div className='flex gap-1'>
-          <div>
-            <p className='text-4xl font-bold'>{estate_title}</p>
+      {/* Upper Section */}
+      <div className='flex gap-5 p-5 my-5 shadow-xl rounded-2xl border-2 border-base-300'>
+        {/* First upper part */}
+        <div className='pr-5 border-r-2 border-gray-400'>
+          <div className='flex gap-1'>
+            <div>
+              <p className='text-4xl font-bold'>{estate_title}</p>
+            </div>
+            <div>
+              <p className='badge badge badge-success mt-3 font-semibold'>
+                {status}
+              </p>
+            </div>
           </div>
-          <div>
-            <div className='badge badge badge-accent font-semibold'>{status}</div>
+          {/* Segment / Type */}
+          <div className='flex gap-1 items-center font-semibold'>
+            <div className='text-lg lg:text-xl text-emerald-500'>
+              <PiLineSegmentsBold />
+            </div>
+            <div>
+              <p>{segment_name}</p>
+            </div>
+          </div>
+          {/* Location */}
+          <div className='flex gap-1 items-center font-semibold'>
+            <div className='text-lg lg:text-xl text-emerald-500'>
+              <IoLocationSharp />
+            </div>
+            <div>
+              <p>{location}</p>
+            </div>
           </div>
         </div>
-        {/* Segment / Type */}
-        <div className='flex gap-1 items-center font-semibold'>
-          <div className='text-lg lg:text-xl text-emerald-500'>
-            <PiLineSegmentsBold />
+        {/* Second upper part */}
+        <div className='pr-5 border-r-2 border-gray-400'>
+          {/* Area */}
+          <div className='flex gap-1 items-center font-semibold'>
+            <div className='text-xl lg:text-2xl text-emerald-500'>
+              <TbChartAreaFilled />
+            </div>
+            <p>{area}</p>
           </div>
-          <div>
-            <p>{segment_name}</p>
+
+          {/* Facilities */}
+          <div className=' xl:gap-2 my-2'>
+            {facilities.map((facility, idx) => (
+              <div
+                key={idx}
+                className='badge badge-soft badge-accent font-semibold'
+              >
+                {facility}
+              </div>
+            ))}
           </div>
         </div>
-        {/* Location */}
-        <div className='flex gap-1 items-center font-semibold'>
-          <div className='text-lg lg:text-xl text-emerald-500'>
-            <IoLocationSharp />
-          </div>
-          <div>
-            <p>{location}</p>
+        {/* Third upper part */}
+        <div>
+          {/* Price */}
+          <div className='flex gap-1 items-center text-base lg:text-lg'>
+            <div className='text-xl lg:text-2xl text-emerald-500'>
+              <FaMoneyBillAlt />
+            </div>
+            <p className='text-5xl'>
+              {price}
+              <span>
+                {status === "rent" && (
+                  <>
+                    /<span className='text-3xl font-semibold'>month</span>
+                  </>
+                )}
+              </span>
+            </p>
           </div>
         </div>
       </div>

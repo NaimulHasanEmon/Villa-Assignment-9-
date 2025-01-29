@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { TbChartAreaFilled } from "react-icons/tb";
 import { FaMoneyBillAlt } from "react-icons/fa";
+import { TbChartAreaFilled } from "react-icons/tb";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaLocationArrow } from "react-icons/fa";
 import "./EstateCard.css";
@@ -22,7 +22,11 @@ const EstateCard = ({ commData }) => {
   return (
     <div className='relative card shadow-2xl xl:mx-2 p-4 md:p-2 h-full'>
       <div className='bg-base-200 flex justify-center items-center rounded-xl mb-3'>
-        <img className='rounded-t-xl mb-1 w-full h-48 object-cover' src={image} alt={estate_title} />
+        <img
+          className='rounded-t-xl mb-1 w-full h-48 object-cover'
+          src={image}
+          alt={estate_title}
+        />
       </div>
       <div className='text-xl lg:text-2xl font-bold'>
         <p>{estate_title}</p>
@@ -69,7 +73,16 @@ const EstateCard = ({ commData }) => {
         <div className='text-xl lg:text-2xl text-emerald-500'>
           <FaMoneyBillAlt />
         </div>
-        <p>{price}</p>
+        <p>
+          {price}
+          <span>
+            {status === "rent" && (
+              <>
+                /<span>month</span>
+              </>
+            )}
+          </span>
+        </p>
       </div>
       {/* Area */}
       <div className='flex gap-1 items-center font-semibold'>
@@ -91,7 +104,10 @@ const EstateCard = ({ commData }) => {
       {/* Facilities */}
       <div className='grid grid-cols-2 gap-1 xl:gap-2 my-2'>
         {facilities.map((facility, idx) => (
-          <div key={idx} className='badge badge-soft badge-accent font-semibold'>
+          <div
+            key={idx}
+            className='badge badge-soft badge-accent font-semibold'
+          >
             {facility}
           </div>
         ))}

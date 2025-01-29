@@ -51,7 +51,7 @@ const Routes = createBrowserRouter([
         loader: () => fetch("/commercial.json"),
         element: (
           <PrivateRoutes>
-            <PropertyDetails></PropertyDetails>,
+            <PropertyDetails></PropertyDetails>
           </PrivateRoutes>
         ),
       },
