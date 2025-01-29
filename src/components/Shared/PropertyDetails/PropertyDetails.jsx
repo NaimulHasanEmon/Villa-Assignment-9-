@@ -14,6 +14,7 @@ const PropertyDetails = () => {
   const [selectProperty, setSelectProperty] = useState(null);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     const property = propertyItem.find((p) => p.id === parseInt(id));
     setSelectProperty(property);
   }, [propertyItem, id]);
