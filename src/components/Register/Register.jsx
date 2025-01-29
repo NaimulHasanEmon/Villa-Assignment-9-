@@ -2,11 +2,12 @@ import { FcGoogle } from "react-icons/fc";
 import { DiGithubBadge } from "react-icons/di";
 import { FaFacebook } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-// import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
+  const [showPass, setShowPass] = useState(false);
   const { createUser, loginWithGoogle, loginWithGithub, loginWithFacebook } =
     useContext(AuthContext);
 
@@ -33,6 +34,7 @@ const Register = () => {
     loginWithGoogle()
       .then((result) => {
         console.log(result.user);
+        console.log(result.user.photoURL);
       })
       .catch((error) => {
         console.log(error.message);
@@ -50,7 +52,7 @@ const Register = () => {
       });
   };
 
-  // With Twitter
+  // With Facebook
   const handleLogInWithFacebook = () => {
     loginWithFacebook()
       .then((result) => {
@@ -132,13 +134,19 @@ const Register = () => {
               <div className='relative'>
                 <input
                   className=' w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-sm'
-                  type='password'
+                  type={showPass ? "text" : "password"}
                   name='password'
                   required
                   placeholder='Enter your password'
                 />
-                <span className='absolute top-4 right-3 cursor-pointer'></span>
+                <span
+                  onClick={() => setShowPass(!showPass)}
+                  className='absolute top-4 right-3 cursor-pointer'
+                >
+                  {showPass ? <FaEyeSlash /> : <FaEye />}
+                </span>
               </div>
+
             </div>
 
             {/* Terms and Conditions */}

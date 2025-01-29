@@ -9,6 +9,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import PropertyDetails from "../components/Shared/PropertyDetails/PropertyDetails";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 
 const Routes = createBrowserRouter([
   {
@@ -47,12 +48,17 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/property/:id",
-        element: <PropertyDetails></PropertyDetails>,
+        loader: () => fetch("/commercial.json"),
+        element: (
+          <PrivateRoutes>
+            <PropertyDetails></PropertyDetails>,
+          </PrivateRoutes>
+        ),
       },
       {
-        path: '/policy',
-        element: <></>
-      }
+        path: "/policy",
+        element: <></>,
+      },
     ],
   },
 ]);

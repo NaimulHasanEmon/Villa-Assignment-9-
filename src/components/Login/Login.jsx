@@ -1,16 +1,71 @@
 import { FcGoogle } from "react-icons/fc";
 import { DiGithubBadge } from "react-icons/di";
 import { RiTwitterXLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+  const [showPass, setShowPass] = useState(false);
+  const {
+    loginWithEmailAndPassword,
+    loginWithGoogle,
+    loginWithGithub,
+    loginWithFacebook,
+  } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleLogIn = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const email = form.get("email");
     const password = form.get("password");
 
-    console.log(email, password);
+    loginWithEmailAndPassword(email, password)
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.log("Error: " + error.message);
+      });
+  };
+
+  // With Google
+  const handleLoginWithGoogle = () => {
+    loginWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        console.log(result.user.photoURL);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  // With Github
+  const handleLogInGitHub = () => {
+    loginWithGithub()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+
+  // With Facebook
+  const handleLogInWithFacebook = () => {
+    loginWithFacebook()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
   return (
@@ -48,12 +103,17 @@ const Login = () => {
               <div className='relative'>
                 <input
                   className='w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400'
-                  type='password'
+                  type={showPass ? "text" : "password"}
                   name='password'
                   required
                   placeholder='Enter your password'
                 />
-                <span className='absolute top-4 right-3 cursor-pointer'></span>
+                <span
+                  onClick={() => setShowPass(!showPass)}
+                  className='absolute top-4 right-3 cursor-pointer'
+                >
+                  {showPass ? <FaEyeSlash /> : <FaEye />}
+                </span>
               </div>
             </div>
             <div className='mt-6'>
@@ -85,17 +145,26 @@ const Login = () => {
             <div>
               <div className='flex gap-3'>
                 {/* Login with google */}
-                <button className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
+                <button
+                  onClick={() => handleLoginWithGoogle()}
+                  className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'
+                >
                   <FcGoogle className='text-xl' />
                 </button>
 
                 {/* Login with Github */}
-                <button className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
+                <button
+                  onClick={() => handleLogInGitHub()}
+                  className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'
+                >
                   <DiGithubBadge className='text-2xl' />
                 </button>
 
                 {/* Login with X or Twitter */}
-                <button className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
+                <button
+                  onClick={() => handleLogInWithFacebook()}
+                  className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'
+                >
                   <RiTwitterXLine className='text-2xl' />
                 </button>
               </div>
