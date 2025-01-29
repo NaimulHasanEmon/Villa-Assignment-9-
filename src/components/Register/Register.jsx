@@ -1,14 +1,14 @@
 import { FcGoogle } from "react-icons/fc";
-// import { DiApple } from "react-icons/di";
 import { DiGithubBadge } from "react-icons/di";
-import { RiTwitterXLine } from "react-icons/ri";
+import { FaFacebook } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 // import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const { createUser, loginWithGoogle, loginWithGithub } = useContext(AuthContext);
+  const { createUser, loginWithGoogle, loginWithGithub, loginWithFacebook } =
+    useContext(AuthContext);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -42,13 +42,24 @@ const Register = () => {
   // With Github
   const handleLogInGitHub = () => {
     loginWithGithub()
-     .then((result) => {
+      .then((result) => {
         console.log(result.user);
       })
-     .catch((error) => {
+      .catch((error) => {
         console.log(error.message);
       });
-  }
+  };
+
+  // With Twitter
+  const handleLogInWithFacebook = () => {
+    loginWithFacebook()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
 
   return (
     <div className='flex flex-col my-8'>
@@ -194,14 +205,18 @@ const Register = () => {
 
                 {/* Login with Github */}
                 <button
-                onClick={() => handleLogInGitHub()}
-                className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
+                  onClick={() => handleLogInGitHub()}
+                  className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'
+                >
                   <DiGithubBadge className='text-2xl' />
                 </button>
 
                 {/* Login with X or Twitter */}
-                <button className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'>
-                  <RiTwitterXLine className='text-2xl' />
+                <button
+                  onClick={() => handleLogInWithFacebook()}
+                  className='mt-2 w-full h-12 rounded-md flex justify-center items-center font-medium gap-2 border border-[#ededef] bg-white cursor-pointer transition duration-200 ease-in-out hover:border-[#2d79f3]'
+                >
+                  <FaFacebook className='text-xl text-blue-500' />
                 </button>
               </div>
             </div>

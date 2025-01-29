@@ -2,6 +2,7 @@ import { createContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   createUserWithEmailAndPassword,
+  FacebookAuthProvider,
   GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
@@ -20,6 +21,7 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
+  const facebookProvider = new FacebookAuthProvider();
 
   // Create User
   const createUser = (email, password) => {
@@ -45,6 +47,12 @@ const AuthProvider = ({ children }) => {
       });
   };
 
+  // Login with Twitter
+  const loginWithFacebook = () => {
+    setLoading(true);
+    return signInWithPopup(auth, facebookProvider);
+  }
+
   // Logout
   const logOut = () => {
     setLoading(true);
@@ -67,6 +75,7 @@ const AuthProvider = ({ children }) => {
     createUser,
     loginWithGoogle,
     loginWithGithub,
+    loginWithFacebook,
     logOut,
   };
 

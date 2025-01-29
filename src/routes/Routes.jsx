@@ -49,6 +49,10 @@ const Routes = createBrowserRouter([
         path: "/property/:id",
         element: <PropertyDetails></PropertyDetails>,
       },
+      {
+        path: '/policy',
+        element: <></>
+      }
     ],
   },
 ]);
