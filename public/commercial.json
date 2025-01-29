@@ -4,83 +4,111 @@
     "estate_title": "Prime Office Space",
     "segment_name": "Commercial",
     "description": "Premium office space in the heart of downtown with modern amenities.",
+    "description_detail": "This 3,000 sq ft office space features floor-to-ceiling windows with panoramic city views, modern HVAC systems, and fiber-optic internet infrastructure. Includes 6 private offices, 2 conference rooms with telepresence equipment, and an open-plan workspace for 50+ employees. Building amenities include 24/7 security, biometric access, a rooftop terrace, and a fitness center. Located in the financial district, it offers proximity to major transit hubs, restaurants, and banking institutions. LEED Gold certified with energy-efficient lighting and smart climate control. Tenant benefits include access to shared business lounges and priority booking for event spaces.",
     "price": "$500,000",
     "status": "sale",
     "area": "3000 sq ft",
     "location": "Downtown, City Center",
     "facilities": ["Conference Rooms", "Cafeteria", "24/7 Security"],
-    "image": "../public/Image/EstateItems/EstateImage1.jpg"
+    "image": "../public/Image/EstateItems/EstateImage1.jpg",
+    "owner_name": "John Smith",
+    "mobile_number": "+1 555-234-5678",
+    "owner_image": "../public/Image/PropertyOwners/PropertyOwners1.jpg"
   },
   {
     "id": 2,
     "estate_title": "Retail Space in Mall",
     "segment_name": "Commercial",
     "description": "High-footfall retail space in a popular shopping mall, ideal for boutiques.",
+    "description_detail": "1,500 sq ft retail unit located on the main promenade of City Mall, featuring custom glass storefronts and built-in display shelves. Equipped with POS systems, inventory storage, and ADA-compliant facilities. The mall sees 50,000+ weekly visitors and offers central air conditioning, 24-hour security, and shared staff restrooms. Ideal for fashion retailers, with existing digital signage infrastructure and anti-theft security systems. Lease includes participation in mall-wide marketing campaigns and seasonal sales events. Delivery access via dedicated loading docks. Recent upgrades include LED lighting and contactless payment integration. Previous tenant achieved $1.2M annual revenue.",
     "price": "$4,000",
     "status": "rent",
     "area": "1500 sq ft",
     "location": "City Mall, High Street",
     "facilities": ["Air Conditioning", "Parking Lot", "Restrooms"],
-    "image": "../public/Image/EstateItems/EstateImage2.jpg"
+    "image": "../public/Image/EstateItems/EstateImage2.jpg",
+    "owner_name": "Sarah Johnson",
+    "mobile_number": "+1 555-345-6789",
+    "owner_image": "../public/Image/PropertyOwners/PropertyOwners2.jpg"
   },
   {
     "id": 3,
     "estate_title": "Warehouse for Rent",
     "segment_name": "Commercial",
     "description": "Spacious warehouse with loading docks and easy highway access.",
+    "description_detail": "5,000 sq ft industrial warehouse with 28-foot ceilings, featuring 2 drive-in loading docks and 480V 3-phase power. Equipped with ESFR fire suppression, motion-sensor LED lighting, and solar panels covering 40% of energy needs. Concrete floors rated for 10,000 lb/sq ft capacity. Located 1.5 miles from Interstate 10 with 24/7 access. Includes 10 parking spaces, EV charging stations, and perimeter fencing with 16-camera surveillance. Ideal for logistics, manufacturing, or bulk storage. Recent upgrades include insulated ceilings and automated dock doors. Zoned for industrial use with easy access to rail and port facilities.",
     "price": "$2,000",
     "status": "rent",
     "area": "5000 sq ft",
     "location": "Industrial Area, Sector 5",
     "facilities": ["Loading Docks", "CCTV Surveillance", "Fire Safety System"],
-    "image": "../public/Image/EstateItems/EstateImage3.jpg"
+    "image": "../public/Image/EstateItems/EstateImage3.jpg",
+    "owner_name": "Michael Brown",
+    "mobile_number": "+1 555-456-7890",
+    "owner_image": "../public/Image/PropertyOwners/PropertyOwners3.jpg"
   },
   {
     "id": 4,
     "estate_title": "Restaurant Space",
     "segment_name": "Commercial",
     "description": "Turnkey restaurant space in a busy neighborhood, perfect for fine dining.",
+    "description_detail": "2,500 sq ft fully equipped restaurant with commercial Vulcan kitchen appliances, walk-in refrigerator, and soundproofed dining area. Features an 80-seat interior and 40-seat outdoor patio with fire pits. Includes alcohol license, POS systems, and grease interceptor. Turnkey package offers designer furniture, China/glassware, and existing bar with 12 taps. Located in a dining district with 10,000+ daily foot traffic. Back-of-house includes office space, staff locker room, and delivery entrance. Recent hood system inspection and certification. ADA-compliant restrooms and wheelchair-accessible seating. Ideal for immediate operation with minimal renovations required.",
     "price": "$250,000",
     "status": "sale",
     "area": "2500 sq ft",
     "location": "Main Street, Uptown",
     "facilities": ["Fully Furnished", "Outdoor Seating", "Bar Area"],
-    "image": "../public/Image/EstateItems/EstateImage4.jpg"
+    "image": "../public/Image/EstateItems/EstateImage4.jpg",
+    "owner_name": "Emily Davis",
+    "mobile_number": "+1 555-567-8901",
+    "owner_image": "../public/Image/PropertyOwners/PropertyOwners4.jpg"
   },
   {
     "id": 5,
     "estate_title": "Modern Entertainment Venue",
     "segment_name": "Commercial",
     "description": "State-of-the-art entertainment venue equipped with sound and lighting systems.",
+    "description_detail": "4,000 sq ft entertainment complex featuring a main stage, VIP lounge, and advanced JBL sound/LED lighting systems. Accommodates 300 guests with retractable seating and dance floor. Includes green rooms, commercial kitchen, and 4 bars. Equipped with 3-phase power, rigging points, and digital ticketing systems. Located in the entertainment district with proximity to hotels and nightlife. Features include acoustic paneling, fog machine compatibility, and livestreaming infrastructure. Parking for 50 vehicles with valet service options. Recent upgrades include touchless restrooms and UV air purification. Ideal for concerts, corporate events, or theatrical productions.",
     "price": "$800,000",
     "status": "sale",
     "area": "4000 sq ft",
     "location": "Downtown Entertainment District",
     "facilities": ["Stage", "VIP Lounge", "Parking"],
-    "image": "../public/Image/EstateItems/EstateImage5.jpg"
+    "image": "../public/Image/EstateItems/EstateImage5.jpg",
+    "owner_name": "David Wilson",
+    "mobile_number": "+1 555-678-9012",
+    "owner_image": "../public/Image/PropertyOwners/PropertyOwners5.jpg"
   },
   {
     "id": 6,
     "estate_title": "Industrial Warehouse",
     "segment_name": "Commercial",
     "description": "Large industrial warehouse with proximity to transport hubs at City Outskirts.",
+    "description_detail": "8,000 sq ft warehouse with 32-foot clear heights and 5-ton overhead cranes. Features 3 loading docks, grade-level doors, and concrete floors rated for 15,000 lb/sq ft. Equipped with 600V power, compressed air lines, and industrial ventilation. Located near major highways and rail terminals. Includes 20 parking spots, truck court, and security gate. Recent additions include solar panels (covers 60% energy needs) and EV charging stations. Zoned for heavy manufacturing with permits for 24/7 operations. Security features include thermal cameras and seismic activity sensors. Ideal for automotive, aerospace, or large-scale production facilities.",
     "price": "$3,000",
     "status": "rent",
     "area": "8000 sq ft",
     "location": "Logistics Hub, City Outskirts",
     "facilities": ["High Ceilings", "24/7 Security", "Loading Dock"],
-    "image": "../public/Image/EstateItems/EstateImage6.jpg"
+    "image": "../public/Image/EstateItems/EstateImage6.jpg",
+    "owner_name": "Jessica Martinez",
+    "mobile_number": "+1 555-789-0123",
+    "owner_image": "../public/Image/PropertyOwners/PropertyOwners6.jpg"
   },
   {
     "id": 7,
     "estate_title": "Boutique Office Space",
     "segment_name": "Commercial",
     "description": "Boutique office space suitable for small businesses and startups.",
+    "description_detail": "1,000 sq ft flexible workspace with open-plan design and glass-walled conference rooms. Features ergonomic furniture, high-speed Wi-Fi 6, and smart meeting room booking systems. Includes a breakout area with kitchenette and phone booths for private calls. Building offers shared amenities: gym, rooftop garden, and bike storage. Located in a tech-friendly neighborhood with fiber-optic internet infrastructure. Floor-to-ceiling windows provide natural light, with automated blinds and zoned climate control. Ideal for teams of 10-15 people. Lease includes cleaning services and access to coworking events. ADA-compliant with elevator access and gender-neutral restrooms.",
     "price": "$1,200",
     "status": "rent",
     "area": "1000 sq ft",
     "location": "Suburban Business District",
     "facilities": ["Open Workspace", "Breakout Area", "Parking"],
-    "image": "../public/Image/EstateItems/EstateImage7.jpg"
+    "image": "../public/Image/EstateItems/EstateImage7.jpg",
+    "owner_name": "Daniel Taylor",
+    "mobile_number": "+1 555-890-1234",
+    "owner_image": "../public/Image/PropertyOwners/PropertyOwners7.jpg"
   }
 ]
