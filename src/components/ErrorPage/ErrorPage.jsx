@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import errorMatrix from "../../assets/image/ErrorPage/ErrorMatrix.jpg";
+import errorMatrix from "../../../public/image/ErrorPage/ErrorMatrix.jpg";
 // import Header from "../Header/Header";
 
 const ErrorPage = () => {
