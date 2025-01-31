@@ -26,7 +26,7 @@ const Slider = ({ commercialData }) => {
   return (
     <div className='relative'>
       <AutoplaySlider
-        className='h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]'
+        className='h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[610px]'
         play={true}
         interval={5000} // Interval between slides
         infinite={true}
