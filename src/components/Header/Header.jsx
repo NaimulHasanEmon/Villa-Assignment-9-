@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
-import logo from "../../assets/Image/Logo&FavIcon/Logo.png";
+import logo from "../../assets/image/Logo&FavIcon/Logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";

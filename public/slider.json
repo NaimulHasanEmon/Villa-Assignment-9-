@@ -1,37 +1,37 @@
 [
   {
     "id": 1,
-    "image": "../src/assets/Image/BannerImages/BannerImage1.jpg",
+    "image": "../src/assets/image/BannerImages/BannerImage1.jpg",
     "info": "Historic Edwardian boathouse on Ullswater Lake. Grade II listed UNESCO World Heritage Site with 2,150 sq ft event space and lakeside terrace."
   },
   {
     "id": 2,
-    "image": "../src/assets/Image/BannerImages/BannerImage2.jpg",
+    "image": "../src/assets/image/BannerImages/BannerImage2.jpg",
     "info": "LBBW Tower Stuttgart - 22-story banking headquarters with Class A office space, helipad access, and DGNB Gold certified sustainability features."
   },
   {
     "id": 3,
-    "image": "../src/assets/Image/BannerImages/BannerImage3.jpg",
+    "image": "../src/assets/image/BannerImages/BannerImage3.jpg",
     "info": "Lake Geneva luxury retail space on Quai Gustave-Ador. 650 sq m premium shopping unit with panoramic lake views and 24/7 security."
   },
   {
     "id": 4,
-    "image": "../src/assets/Image/BannerImages/BannerImage4.jpg",
+    "image": "../src/assets/image/BannerImages/BannerImage4.jpg",
     "info": "University of Graz Historical Building - Baroque-style 18th-century academic complex with vaulted ceilings and UNESCO City of Design status."
   },
   {
     "id": 5,
-    "image": "../src/assets/Image/BannerImages/BannerImage5.jpg",
+    "image": "../src/assets/image/BannerImages/BannerImage5.jpg",
     "info": "Austin Luxury Realty HQ - Modern 3,500 sq ft brokerage office in Frost Bank Tower featuring smart building systems and rooftop terrace."
   },
   {
     "id": 6,
-    "image": "../src/assets/Image/BannerImages/BannerImage6.jpg",
+    "image": "../src/assets/image/BannerImages/BannerImage6.jpg",
     "info": "Grafental Industrial Complex - 8,500 sq m manufacturing facility with 10-ton crane capacity, rail access, and Industry 4.0 automation."
   },
   {
     "id": 7,
-    "image": "../src/assets/Image/BannerImages/BannerImage7.jpg",
+    "image": "../src/assets/image/BannerImages/BannerImage7.jpg",
     "info": "Villa Courbe by SAOTA - Architectural masterpiece on Lake Geneva with cantilevered design, infinity pool, and commercial event license."
   }
 ]

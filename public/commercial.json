@@ -11,10 +11,10 @@
     "location": "Universitätsplatz 3, Graz, Austria",
     "facilities": ["Historical Architecture", "Auditorium", "Archives"],
     "coordinates": [47.0775, 15.4473],
-    "image": "../src/assets/Image/EstateItems/EstateImage1.jpg",
+    "image": "../src/assets/image/EstateItems/EstateImage1.jpg",
     "owner_name": "University of Graz",
     "mobile_number": "+43 316 380-0",
-    "owner_image": "../src/assets/Image/PropertyOwners/PropertyOwners1.jpg"
+    "owner_image": "../src/assets/image/PropertyOwners/PropertyOwners1.jpg"
   },
   {
     "id": 2,
@@ -28,10 +28,10 @@
     "location": "Quai Gustave-Ador, Geneva, Switzerland",
     "facilities": ["Marina Access", "Luxury Fit-Out", "24/7 Security"],
     "coordinates": [46.2078, 6.1581],
-    "image": "../src/assets/Image/EstateItems/EstateImage2.jpg",
+    "image": "../src/assets/image/EstateItems/EstateImage2.jpg",
     "owner_name": "Banque Lombard Odier",
     "mobile_number": "+41 22 709 2111",
-    "owner_image": "../src/assets/Image/PropertyOwners/PropertyOwners2.jpg"
+    "owner_image": "../src/assets/image/PropertyOwners/PropertyOwners2.jpg"
   },
   {
     "id": 3,
@@ -45,10 +45,10 @@
     "location": "Chemin de la Courbe, Vaud, Switzerland",
     "facilities": ["Infinity Pool", "Smart Home", "Event License"],
     "coordinates": [46.4493, 6.8585],
-    "image": "../src/assets/Image/EstateItems/EstateImage3.jpg",
+    "image": "../src/assets/image/EstateItems/EstateImage3.jpg",
     "owner_name": "Famille Rochat",
     "mobile_number": "+41 21 555 0177",
-    "owner_image": "../src/assets/Image/PropertyOwners/PropertyOwners3.jpg"
+    "owner_image": "../src/assets/image/PropertyOwners/PropertyOwners3.jpg"
   },
   {
     "id": 4,
@@ -62,10 +62,10 @@
     "location": "401 Congress Ave, Austin, TX",
     "facilities": ["Smart Office", "Wine Cellar", "Rooftop Terrace"],
     "coordinates": [30.2653, -97.7435],
-    "image": "../src/assets/Image/EstateItems/EstateImage4.jpg",
+    "image": "../src/assets/image/EstateItems/EstateImage4.jpg",
     "owner_name": "Austin Luxury Realty LLC",
     "mobile_number": "+1 512-555-0199",
-    "owner_image": "../src/assets/Image/PropertyOwners/PropertyOwners4.jpg"
+    "owner_image": "../src/assets/image/PropertyOwners/PropertyOwners4.jpg"
   },
   {
     "id": 5,
@@ -79,10 +79,10 @@
     "location": "Am Hauptbahnhof 2, Stuttgart, Germany",
     "facilities": ["Helipad", "Trading Floors", "Secure Vaults"],
     "coordinates": [48.7833, 9.1814],
-    "image": "../src/assets/Image/EstateItems/EstateImage5.jpg",
+    "image": "../src/assets/image/EstateItems/EstateImage5.jpg",
     "owner_name": "LBBW Immobilien",
     "mobile_number": "+49 711 127-0",
-    "owner_image": "../src/assets/Image/PropertyOwners/PropertyOwners5.jpg"
+    "owner_image": "../src/assets/image/PropertyOwners/PropertyOwners5.jpg"
   },
   {
     "id": 6,
@@ -96,10 +96,10 @@
     "location": "Ullswater, Lake District, England",
     "facilities": ["Event Space", "Waterside Access", "Commercial Kitchen"],
     "coordinates": [54.5621, -2.8805],
-    "image": "../src/assets/Image/EstateItems/EstateImage6.jpg",
+    "image": "../src/assets/image/EstateItems/EstateImage6.jpg",
     "owner_name": "National Trust",
     "mobile_number": "+44 17684 82200",
-    "owner_image": "../src/assets/Image/PropertyOwners/PropertyOwners6.jpg"
+    "owner_image": "../src/assets/image/PropertyOwners/PropertyOwners6.jpg"
   },
   {
     "id": 7,
@@ -113,9 +113,9 @@
     "location": "Grafentaler Weg 9, Düsseldorf, Germany",
     "facilities": ["Rail Access", "Clean Rooms", "Automation Ready"],
     "coordinates": [51.2306, 6.7821],
-    "image": "../src/assets/Image/EstateItems/EstateImage7.jpg",
+    "image": "../src/assets/image/EstateItems/EstateImage7.jpg",
     "owner_name": "Metallwerke Grafental",
     "mobile_number": "+49 211 8834-500",
-    "owner_image": "../src/assets/Image/PropertyOwners/PropertyOwners7.jpg"
+    "owner_image": "../src/assets/image/PropertyOwners/PropertyOwners7.jpg"
   }
 ]
