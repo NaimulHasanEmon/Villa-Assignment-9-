@@ -3,15 +3,15 @@ import Slider from "../Slider/Slider";
 import EstateContainer from "../Estate/EstateContainer/EstateContainer";
 
 const Home = () => {
-  const sliderInfo = useLoaderData();
+  const commercialData = useLoaderData();
 
   return (
     <div>
-      <div className="mb-10">
-        <Slider sliderInfo={sliderInfo}></Slider>
+      <div className='mb-10'>
+      <Slider commercialData={commercialData}></Slider>
       </div>
       <div>
-        <EstateContainer></EstateContainer>
+        <EstateContainer commercialData={commercialData}></EstateContainer>
       </div>
     </div>
   );

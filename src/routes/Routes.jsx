@@ -19,7 +19,7 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("/slider.json"),
+        loader: () => fetch("/commercial.json").then(res => res.json()), // Loader for home
         element: <Home></Home>,
       },
       {
@@ -56,12 +56,19 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/property/:id",
-        loader: () => fetch("/commercial.json"),
+        loader: async ({ params }) => {
+          const res = await fetch("/commercial.json");
+          const data = await res.json();
+          const property = data.find(item => item.id === Number(params.id));
+          if (!property) throw new Response("Not Found", { status: 404 });
+          return property;
+        },
         element: (
           <PrivateRoutes>
-            <PropertyDetails></PropertyDetails>,
+            <PropertyDetails></PropertyDetails>
           </PrivateRoutes>
         ),
+        errorElement: <ErrorPage />
       },
       {
         path: "/policy",

@@ -1,29 +1,20 @@
-import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { IoLocationSharp } from "react-icons/io5";
 import { PiLineSegmentsBold } from "react-icons/pi";
 import { TbChartAreaFilled } from "react-icons/tb";
 import { FaMoneyBillAlt } from "react-icons/fa";
-// import Slider from "../Slider/Slider";
 import { BsTelephone } from "react-icons/bs";
 
 const PropertyDetails = () => {
-  const propertyItem = useLoaderData();
-  const { id } = useParams();
-  const [selectProperty, setSelectProperty] = useState(null);
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    const property = propertyItem.find((p) => p.id === parseInt(id));
-    setSelectProperty(property);
-  }, [propertyItem, id]);
+  const selectProperty = useLoaderData();
+  
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   if (!selectProperty) {
     return (
       <div>
-        <Loader></Loader>
-        {/* Loading... */}
+        <Loader />
       </div>
     );
   }
@@ -54,7 +45,7 @@ const PropertyDetails = () => {
               <p className='text-4xl font-bold'>{estate_title}</p>
             </div>
             <div>
-              <p className='badge badge badge-success mt-3 font-semibold'>
+              <p className='badge badge-success mt-3 font-semibold'>
                 {status}
               </p>
             </div>
@@ -78,6 +69,7 @@ const PropertyDetails = () => {
             </div>
           </div>
         </div>
+
         {/* Second upper part */}
         <div className='pr-5 border-r-2 border-gray-400'>
           {/* Area */}
@@ -89,17 +81,18 @@ const PropertyDetails = () => {
           </div>
 
           {/* Facilities */}
-          <div className=' xl:gap-2 my-2'>
+          <div className='xl:gap-2 my-2'>
             {facilities.map((facility, idx) => (
               <div
                 key={idx}
-                className='badge badge-soft badge-accent font-semibold'
+                className='badge badge-accent font-semibold'
               >
                 {facility}
               </div>
             ))}
           </div>
         </div>
+
         {/* Third upper part */}
         <div>
           {/* Price */}
@@ -108,7 +101,7 @@ const PropertyDetails = () => {
               <FaMoneyBillAlt />
             </div>
             <p className='text-5xl pb-1'>
-              {price.includes("/") ? (
+              {typeof price === 'string' && price.includes("/") ? (
                 <>
                   {price.split("/")[0]}
                   <span className='text-5xl'>/</span>
@@ -124,69 +117,53 @@ const PropertyDetails = () => {
         </div>
       </div>
 
-      {/* Image and  */}
+      {/* Image and Contact Section */}
       <div className='flex gap-5 mt-10 justify-center'>
-        {/* Add Slider Here */}
         <div className='w-204'>
-          <img src={image} alt={estate_title} title={estate_title} />
+          <img src={image} alt={estate_title} className="rounded-lg shadow-xl" />
         </div>
 
         {/* Contact Owner */}
-        <div className='shadow-2xl px-10 py-5 rounded-xl'>
-          <div>
-            {/* Owner Info */}
-            <div className='flex gap-2'>
-              <div className='avatar'>
-                <div className='w-20 rounded'>
-                  <img src={owner_image} />
-                </div>
-              </div>
-              <div>
-                <p className='text-xl font-semibold'>{owner_name}</p>
-                <p className='flex text-gray-500 items-center gap-1'>
-                  <BsTelephone />
-                  <span>{mobile_number}</span>
-                </p>
+        <div className='shadow-2xl px-10 py-5 rounded-xl bg-base-100'>
+          <div className='flex gap-4 items-center'>
+            <div className='avatar'>
+              <div className='w-20 rounded-full'>
+                <img src={owner_image} alt={owner_name} />
               </div>
             </div>
-
-            {/* Form */}
-            <div className='my-5'>
-              <form className='flex flex-col gap-2'>
-                <input
-                  className='w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400'
-                  type='text'
-                  name='name'
-                  required
-                  placeholder='Enter your name'
-                />
-                <textarea
-                  className='w-full h-35 border border-gray-300 rounded-md px-3 py-2 mt-1 text-sm focus:outline-none focus:ring-2 focus:ring-gray-400'
-                  type='text'
-                  name='message'
-                  required
-                  placeholder='Enter your message'
-                />
-              </form>
-            </div>
-
-            {/* Button */}
             <div>
-              <button className='btn btn-accent uppercase w-full'>
-                Send Message
-              </button>
+              <h2 className='text-2xl font-bold'>{owner_name}</h2>
+              <p className='flex items-center gap-2 text-gray-600'>
+                <BsTelephone />
+                {mobile_number}
+              </p>
             </div>
           </div>
+
+          <form className='mt-6 space-y-4'>
+            <input
+              type='text'
+              placeholder='Your Name'
+              className='input input-bordered w-full'
+              required
+            />
+            <textarea
+              placeholder='Your Message'
+              className='textarea textarea-bordered w-full h-32'
+              required
+            ></textarea>
+            <button className='btn btn-primary w-full'>
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
 
       {/* Property Description */}
-      <div className='mt-8'>
-        <div>
-          <p className='text-[28px] font-bold mb-2'>Property Description</p>
-        </div>
-        <div>
-          <p className='text-lg'>{description_detail}</p>
+      <div className='mt-8 prose max-w-none'>
+        <h2 className='text-3xl font-bold mb-4'>Property Description</h2>
+        <div className='text-lg whitespace-pre-line'>
+          {description_detail}
         </div>
       </div>
     </div>
