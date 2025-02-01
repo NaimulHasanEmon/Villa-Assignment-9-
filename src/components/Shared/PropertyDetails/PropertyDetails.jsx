@@ -10,7 +10,7 @@ import PropertyMap from "../PropertyMap/PropertyMap";
 const PropertyDetails = () => {
   const selectProperty = useLoaderData();
 
-  // window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
   if (!selectProperty) {
     return (

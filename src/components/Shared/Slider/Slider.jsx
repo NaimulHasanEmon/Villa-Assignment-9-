@@ -24,7 +24,7 @@ const Slider = ({ commercialData }) => {
   // console.log(id);
 
   return (
-    <div className='relative'>
+    <div className='relative px-1'>
       <AutoplaySlider
         className='h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[610px]'
         play={true}
@@ -42,14 +42,14 @@ const Slider = ({ commercialData }) => {
               alt={property.estate_title}
             />
             <div
-              className={`absolute bottom-10 left-5 sm:bottom-20 sm:left-10 md:bottom-20 md:left-20 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 2xl:bottom-20 2xl:left-20 text-white z-50 pr-10 sm:pr-20 md:pr-40 lg:pr-[500px] xl:pr-[500px] 2xl:pr-[500px] ${
+              className={`absolute bottom-5 left-3 md:bottom-10 md:left-10 lg:bottom-20 lg:left-20 xl:bottom-20 xl:left-20 2xl:bottom-20 2xl:left-20 text-white z-50 pr-10 sm:pr-20 md:pr-70 lg:pr-[500px] xl:pr-[500px] 2xl:pr-[500px] ${
                 currentSlide === idx ? "animate-slide-up" : ""
               }`}
             >
-              <p className='text-sm sm:text-lg md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-5xl slide-info-bold'>
-                {property.slider_info}
+              <p className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-5xl slide-info-bold'>
+                {property.description}
               </p>
-              <div className='relative mt-5 sm:mt-10'>
+              <div className='relative mt-2 md:mt-5 lg:mt-8'>
                 <Link
                   to={`/property/${property.id}`}
                   className='pl-2 sm:pl-4 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl button-exploreMore w-32 sm:w-40 md:w-48 lg:w-48 xl:w-52 flex items-center gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'

@@ -57,7 +57,7 @@ const Routes = createBrowserRouter([
       {
         path: "/property/:id",
         loader: async ({ params }) => {
-          const res = await fetch("/commercial.json");
+          const res = await fetch("/public/commercial.json");
           const data = await res.json();
           const property = data.find(item => item.id === Number(params.id));
           if (!property) throw new Response("Not Found", { status: 404 });
