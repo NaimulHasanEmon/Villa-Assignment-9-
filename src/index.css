@@ -4,6 +4,7 @@
 @import url('https://db.onlinewebfonts.com/c/08d650113a671928fa80a338975338ec?family=Trade+Gothic+Next+Rust+W01+Hv');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&display=swap');
 
 @import "tailwindcss";
 @plugin "daisyui";
@@ -65,3 +66,22 @@
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 500;
   }
+
+  .propertyDescription-medium {
+    font-family: "Zilla Slab", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .propertyDescription-semibold {
+    font-family: "Zilla Slab", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .propertyDescription-bold {
+    font-family: "Zilla Slab", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  

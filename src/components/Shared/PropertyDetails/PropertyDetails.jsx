@@ -10,11 +10,11 @@ import PropertyMap from "../PropertyMap/PropertyMap";
 const PropertyDetails = () => {
   const selectProperty = useLoaderData();
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  // window.scrollTo({ top: 0, behavior: "smooth" });
 
   if (!selectProperty) {
     return (
-      <div>
+      <div className='flex justify-center items-center min-h-screen'>
         <Loader />
       </div>
     );
@@ -37,51 +37,38 @@ const PropertyDetails = () => {
   } = selectProperty;
 
   return (
-    <div className='my-12'>
+    <div className='container mx-auto px-2 md:px-4 md:my-12'>
       {/* Upper Section */}
-      <div className='flex gap-5 p-5 shadow-lg rounded border-2 border-base-300'>
+      <div className='flex flex-col md:flex-row shadow-lg rounded border-2 border-base-300'>
         {/* First upper part */}
-        <div className='pr-5 border-r-2 border-gray-400'>
-          <div className='flex gap-1'>
-            <div>
-              <p className='text-4xl font-bold'>{estate_title}</p>
-            </div>
-            <div>
-              <p className='badge badge-success mt-3 font-semibold'>{status}</p>
-            </div>
+        <div className='md:pr-5 border-b-2 md:border-r-2 md:border-b-0 border-gray-400 p-2 md:p-4'>
+          <div className='flex xl:flex-nowrap gap-2 items-center'>
+            <h1 className='text-xl md:text-2xl lg:text-3xl font-bold'>
+              {estate_title}
+            </h1>
+            <span className='badge badge-success font-semibold'>{status}</span>
           </div>
-          {/* Segment / Type */}
-          <div className='flex gap-1 items-center font-semibold'>
-            <div className='text-lg lg:text-xl text-emerald-500'>
-              <PiLineSegmentsBold />
+          {/* segment & location */}
+          <div className='mt-4 space-y-2'>
+            <div className='flex gap-1 items-center font-semibold'>
+              <PiLineSegmentsBold className='text-lg text-emerald-500' />
+              <span className="text-sm md:text-base">{segment_name}</span>
             </div>
-            <div>
-              <p>{segment_name}</p>
-            </div>
-          </div>
-          {/* Location */}
-          <div className='flex gap-1 items-center font-semibold'>
-            <div className='text-lg lg:text-xl text-emerald-500'>
-              <IoLocationSharp />
-            </div>
-            <div>
-              <p>{location}</p>
+            <div className='flex gap-1 items-center font-semibold'>
+              <IoLocationSharp className='text-lg md:text-3xl lg:text-xl text-emerald-500' />
+              <span className="text-sm md:text-base">{location}</span>
             </div>
           </div>
         </div>
 
         {/* Second upper part */}
-        <div className='pr-5 border-r-2 border-gray-400'>
-          {/* Area */}
+        <div className='md:pr-5 border-b-2 md:border-r-2 md:border-b-0 flex flex-col justify-center p-2 md:p-4 border-gray-400'>
           <div className='flex gap-1 items-center font-semibold'>
-            <div className='text-xl lg:text-2xl text-emerald-500'>
-              <TbChartAreaFilled />
-            </div>
-            <p>{area}</p>
+            <TbChartAreaFilled className='text-xl text-emerald-500' />
+            <span>{area}</span>
           </div>
 
-          {/* Facilities */}
-          <div className='xl:gap-2 my-2'>
+          <div className='flex flex-wrap gap-1 mt-2'>
             {facilities.map((facility, idx) => (
               <div key={idx} className='badge badge-accent font-semibold'>
                 {facility}
@@ -91,18 +78,15 @@ const PropertyDetails = () => {
         </div>
 
         {/* Third upper part */}
-        <div>
-          {/* Price */}
-          <div className='flex gap-1 items-center text-base lg:text-lg'>
-            <div className='text-xl lg:text-6xl text-emerald-500'>
-              <FaMoneyBillAlt />
-            </div>
-            <p className='text-5xl pb-1'>
+        <div className='flex items-center p-2 md:p-4'>
+          <div className='flex items-center gap-2'>
+            <FaMoneyBillAlt className='text-3xl md:text-4xl lg:text-5xl text-emerald-500' />
+            <p className='text-2xl md:text-3xl lg:text-4xl font-bold'>
               {typeof price === "string" && price.includes("/") ? (
                 <>
                   {price.split("/")[0]}
-                  <span className='text-5xl'>/</span>
-                  <span className='text-3xl font-semibold'>
+                  <span className='mx-1'>/</span>
+                  <span className='text-xl md:text-2xl lg:text-3xl'>
                     {price.split("/").slice(1).join("/")}
                   </span>
                 </>
@@ -115,25 +99,25 @@ const PropertyDetails = () => {
       </div>
 
       {/* Image and Contact Section */}
-      <div className='flex gap-5 mt-10 justify-center'>
-        <div className='w-350'>
+      <div className='flex flex-col lg:flex-row gap-6 mt-8 items-start'>
+        <div className='w-full lg:w-2/3'>
           <img
             src={image}
             alt={estate_title}
-            className='rounded-lg shadow-xl'
+            className='w-full h-auto rounded-lg shadow-xl object-cover'
           />
         </div>
 
         {/* Contact Owner */}
-        <div className='shadow-2xl px-10 py-5 rounded-xl bg-base-100'>
-          <div className='flex gap-4 items-center'>
+        <div className='w-full lg:w-1/3 shadow-2xl p-4 lg:p-6 rounded-xl bg-base-100'>
+          <div className='flex gap-4'>
             <div className='avatar'>
-              <div className='w-20 rounded-full'>
+              <div className='w-16 rounded-lg'>
                 <img src={owner_image} alt={owner_name} />
               </div>
             </div>
             <div>
-              <h2 className='text-2xl font-bold'>{owner_name}</h2>
+              <h2 className='text-lg md:text-xl xl:text-2xl font-bold'>{owner_name}</h2>
               <p className='flex items-center gap-2 text-gray-600'>
                 <BsTelephone />
                 {mobile_number}
@@ -150,7 +134,7 @@ const PropertyDetails = () => {
             />
             <textarea
               placeholder='Your Message'
-              className='textarea textarea-bordered w-full h-32'
+              className='textarea textarea-bordered w-full xl:h-25'
               required
             ></textarea>
             <button className='btn btn-primary w-full'>Send Message</button>
@@ -159,17 +143,19 @@ const PropertyDetails = () => {
       </div>
 
       {/* property details and map */}
-      <div className="flex gap-10 mt-8">
+      <div className='flex flex-col lg:flex-row gap-6 mt-8'>
         {/* Property Description */}
-        <div className='w-2/3'>
-          <h2 className='text-3xl font-bold mb-4'>Property Description</h2>
-          <div className='text-lg whitespace-pre-line'>
+        <div className='w-full lg:w-2/3'>
+          <p className='text-2xl md:text-3xl propertyDescription-bold mb-4'>
+            Property Description
+          </p>
+          <div className='text-base md:text-lg propertyDescription-medium whitespace-pre-line'>
             {description_detail}
           </div>
         </div>
         {/* Map */}
-        <div className="w-1/3">
-          <PropertyMap coordinates={coordinates}></PropertyMap>
+        <div className='w-full lg:w-1/3 h-[300px] lg:h-auto'>
+          <PropertyMap coordinates={coordinates} />
         </div>
       </div>
     </div>

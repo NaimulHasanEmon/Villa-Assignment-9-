@@ -94,7 +94,7 @@ const Header = () => {
             </ul>
           </div>
           <div className='flex items-center'>
-            <div className='w-20'>
+            <div className='w-20 hidden md:flex'>
               <Link to='/'>
                 <img src={logo} alt='Logo' />
               </Link>
