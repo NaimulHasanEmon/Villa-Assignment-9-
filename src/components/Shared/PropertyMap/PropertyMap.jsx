@@ -7,7 +7,7 @@ const PropertyMap = ({ coordinates }) => {
   const googleMapsSrc = `https://www.google.com/maps?q=${latitude},${longitude}&t=k&hl=es;&output=embed`;
 
   return (
-    <div className="border-[3px] rounded-xl p-[2px] border-teal-300 shadow-2xl lg:h-96 xl:h-[500px]">
+    <div className="rounded-xl p-[2px] lg:h-96 xl:h-[500px]">
       <iframe
         src={googleMapsSrc}
         width="100%"

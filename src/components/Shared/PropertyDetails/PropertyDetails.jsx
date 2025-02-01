@@ -46,17 +46,17 @@ const PropertyDetails = () => {
             <h1 className='text-xl md:text-2xl lg:text-3xl font-bold'>
               {estate_title}
             </h1>
-            <span className='badge badge-success font-semibold'>{status}</span>
+            <span className='badge badge-success text-xs md:text-base font-semibold'>{status}</span>
           </div>
           {/* segment & location */}
           <div className='mt-4 space-y-2'>
             <div className='flex gap-1 items-center font-semibold'>
               <PiLineSegmentsBold className='text-lg text-emerald-500' />
-              <span className="text-sm md:text-base">{segment_name}</span>
+              <span className='text-sm md:text-base'>{segment_name}</span>
             </div>
             <div className='flex gap-1 items-center font-semibold'>
               <IoLocationSharp className='text-lg md:text-3xl lg:text-xl text-emerald-500' />
-              <span className="text-sm md:text-base">{location}</span>
+              <span className='text-sm md:text-base'>{location}</span>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ const PropertyDetails = () => {
 
           <div className='flex flex-wrap gap-1 mt-2'>
             {facilities.map((facility, idx) => (
-              <div key={idx} className='badge badge-accent font-semibold'>
+              <div key={idx} className='badge badge-accent text-xs md:text-base font-semibold'>
                 {facility}
               </div>
             ))}
@@ -99,7 +99,8 @@ const PropertyDetails = () => {
       </div>
 
       {/* Image and Contact Section */}
-      <div className='flex flex-col lg:flex-row gap-6 mt-8 items-start'>
+      <div className='flex flex-col lg:flex-row gap-3 md:gap-6 mt-4 md:mt-8 items-start'>
+        {/* Property Image */}
         <div className='w-full lg:w-2/3'>
           <img
             src={image}
@@ -109,23 +110,25 @@ const PropertyDetails = () => {
         </div>
 
         {/* Contact Owner */}
-        <div className='w-full lg:w-1/3 shadow-2xl p-4 lg:p-6 rounded-xl bg-base-100'>
+        <div className='w-full lg:w-1/3 shadow-2xl p-2 md:p-4 lg:p-6 rounded-xl bg-base-100'>
+          {/* Owner photo, name and phone */}
           <div className='flex gap-4'>
             <div className='avatar'>
-              <div className='w-16 rounded-lg'>
+              <div className='w-14 md:w-16 rounded-lg'>
                 <img src={owner_image} alt={owner_name} />
               </div>
             </div>
             <div>
-              <h2 className='text-lg md:text-xl xl:text-2xl font-bold'>{owner_name}</h2>
-              <p className='flex items-center gap-2 text-gray-600'>
+              <h2 className='md:text-xl xl:text-2xl font-bold'>{owner_name}</h2>
+              <p className='flex text-xs md:text-sm items-center gap-1 md:gap-2 text-gray-600'>
                 <BsTelephone />
                 {mobile_number}
               </p>
             </div>
           </div>
 
-          <form className='mt-6 space-y-4'>
+          {/* Owner contact form */}
+          <form className='mt-3 md:mt-6 space-y-2 md:space-y-4'>
             <input
               type='text'
               placeholder='Your Name'
@@ -137,7 +140,7 @@ const PropertyDetails = () => {
               className='textarea textarea-bordered w-full xl:h-25'
               required
             ></textarea>
-            <button className='btn btn-primary w-full'>Send Message</button>
+            <button className='btn btn-primary h-8 mdh-10 w-full'>Send Message</button>
           </form>
         </div>
       </div>
@@ -154,7 +157,7 @@ const PropertyDetails = () => {
           </div>
         </div>
         {/* Map */}
-        <div className='w-full lg:w-1/3 h-[300px] lg:h-auto'>
+        <div className='w-full lg:w-1/3'>
           <PropertyMap coordinates={coordinates} />
         </div>
       </div>
