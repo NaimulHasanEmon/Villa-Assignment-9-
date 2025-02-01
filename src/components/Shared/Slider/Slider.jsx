@@ -52,7 +52,7 @@ const Slider = ({ commercialData }) => {
               <div className='relative mt-2 md:mt-5 lg:mt-8'>
                 <Link
                   to={`/property/${property.id}`}
-                  className='pl-2 sm:pl-4 text-sm sm:text-base md:text-lg lg:text-lg xl:text-xl button-exploreMore w-32 sm:w-40 md:w-48 lg:w-48 xl:w-52 flex items-center gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'
+                  className='pl-2 sm:pl-4 text-sm sm:text-base md:text-lg xl:text-xl button-exploreMore w-32 sm:w-40 md:w-48 lg:w-48 xl:w-52 flex items-center gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'
                 >
                   <span className='py-1'>Explore More</span>
                   <div className='text-teal-600 mb-1'>

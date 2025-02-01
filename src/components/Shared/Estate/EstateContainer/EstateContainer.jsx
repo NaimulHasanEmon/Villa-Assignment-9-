@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const EstateContainer = ({commercialData }) => {
   return (
-    <div className="my-20">
-      <div className="flex justify-center text-3xl lg:text-5xl mb-5 slide-info-bold">
+    <div className="mb-6 md:my-10 lg:my-15">
+      <div className="flex justify-center text-center px-1 text-2xl md:text-3xl lg:text-4xl lg:mb-5 slide-info-bold">
         <p>Featured Commercial Properties</p>
       </div>
       <div className='p-1'>

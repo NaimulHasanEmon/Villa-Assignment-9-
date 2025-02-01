@@ -20,7 +20,7 @@ const EstateCard = ({ commData }) => {
     image,
   } = commData;
   return (
-    <div className='relative card shadow-2xl xl:mx-2 p-4 md:p-2 h-full'>
+    <div className='relative card shadow-2xl xl:mx-2 px-4 md:px-2 h-full'>
       <div className='bg-base-200 flex justify-center items-center rounded-xl mb-3'>
         <img
           className='rounded-t-xl mb-1 w-full h-48 object-cover'
@@ -120,7 +120,7 @@ const EstateCard = ({ commData }) => {
       <div className='relative xl:mt-5 my-3'>
         <Link
           to={`/property/${id}`}
-          className='pl-4 text-lg lg:text-xl button-viewProperty w-full sm:w-52 flex items-center justify-center md:justify-start gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'
+          className='pl-4 text-sm sm:text-base md:text-lg xl:text-xl button-viewProperty w-full sm:w-52 flex items-center justify-center md:justify-start gap-2 hover:transition-all hover:duration-300 hover:translate-x-1 hover:-translate-y-1 ease-in-out'
         >
           <span className='py-1'>View Property</span>
           <div className='text-[#186650] mb-1'>
