@@ -40,7 +40,7 @@ const EstateCard = ({ commData }) => {
         </p>
       </div>
       {/* Rent / Sale */}
-      <div className='absolute top-6 left-6 badge text-base lg:text-lg py-4 badge-success'>
+      <div className='absolute top-2 md:top-4 left-6 badge text-base lg:text-lg py-4 badge-success'>
         <svg
           className='size-[1em]'
           xmlns='http://www.w3.org/2000/svg'
