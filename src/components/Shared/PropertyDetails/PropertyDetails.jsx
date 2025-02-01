@@ -5,10 +5,11 @@ import { PiLineSegmentsBold } from "react-icons/pi";
 import { TbChartAreaFilled } from "react-icons/tb";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
+import PropertyMap from "../PropertyMap/PropertyMap";
 
 const PropertyDetails = () => {
   const selectProperty = useLoaderData();
-  
+
   window.scrollTo({ top: 0, behavior: "smooth" });
 
   if (!selectProperty) {
@@ -27,6 +28,7 @@ const PropertyDetails = () => {
     area,
     location,
     facilities,
+    coordinates,
     image,
     owner_name,
     mobile_number,
@@ -45,9 +47,7 @@ const PropertyDetails = () => {
               <p className='text-4xl font-bold'>{estate_title}</p>
             </div>
             <div>
-              <p className='badge badge-success mt-3 font-semibold'>
-                {status}
-              </p>
+              <p className='badge badge-success mt-3 font-semibold'>{status}</p>
             </div>
           </div>
           {/* Segment / Type */}
@@ -83,10 +83,7 @@ const PropertyDetails = () => {
           {/* Facilities */}
           <div className='xl:gap-2 my-2'>
             {facilities.map((facility, idx) => (
-              <div
-                key={idx}
-                className='badge badge-accent font-semibold'
-              >
+              <div key={idx} className='badge badge-accent font-semibold'>
                 {facility}
               </div>
             ))}
@@ -101,7 +98,7 @@ const PropertyDetails = () => {
               <FaMoneyBillAlt />
             </div>
             <p className='text-5xl pb-1'>
-              {typeof price === 'string' && price.includes("/") ? (
+              {typeof price === "string" && price.includes("/") ? (
                 <>
                   {price.split("/")[0]}
                   <span className='text-5xl'>/</span>
@@ -119,8 +116,12 @@ const PropertyDetails = () => {
 
       {/* Image and Contact Section */}
       <div className='flex gap-5 mt-10 justify-center'>
-        <div className='w-204'>
-          <img src={image} alt={estate_title} className="rounded-lg shadow-xl" />
+        <div className='w-350'>
+          <img
+            src={image}
+            alt={estate_title}
+            className='rounded-lg shadow-xl'
+          />
         </div>
 
         {/* Contact Owner */}
@@ -152,18 +153,23 @@ const PropertyDetails = () => {
               className='textarea textarea-bordered w-full h-32'
               required
             ></textarea>
-            <button className='btn btn-primary w-full'>
-              Send Message
-            </button>
+            <button className='btn btn-primary w-full'>Send Message</button>
           </form>
         </div>
       </div>
 
-      {/* Property Description */}
-      <div className='mt-8 prose max-w-none'>
-        <h2 className='text-3xl font-bold mb-4'>Property Description</h2>
-        <div className='text-lg whitespace-pre-line'>
-          {description_detail}
+      {/* property details and map */}
+      <div className="flex gap-10 mt-8">
+        {/* Property Description */}
+        <div className='w-2/3'>
+          <h2 className='text-3xl font-bold mb-4'>Property Description</h2>
+          <div className='text-lg whitespace-pre-line'>
+            {description_detail}
+          </div>
+        </div>
+        {/* Map */}
+        <div className="w-1/3">
+          <PropertyMap coordinates={coordinates}></PropertyMap>
         </div>
       </div>
     </div>
