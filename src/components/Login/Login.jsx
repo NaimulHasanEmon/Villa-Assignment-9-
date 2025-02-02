@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
@@ -68,6 +69,9 @@ const Login = () => {
 
   return (
     <div className='flex flex-col my-10'>
+      <Helmet>
+        <title>Elara Villa | Login</title>
+      </Helmet>
       <div className='flex-shrink-0'></div>
       <div className='flex-grow flex items-center justify-center'>
         <div className='max-w-md mx-auto w-full bg-white shadow-xl rounded-3xl sm:p-10 p-6'>

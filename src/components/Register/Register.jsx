@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
@@ -65,6 +66,9 @@ const Register = () => {
 
   return (
     <div className='flex flex-col my-8'>
+      <Helmet>
+        <title>Elara Villa | Register</title>
+      </Helmet>
       <div className='flex flex-col justify-center items-center'>
         <div className='max-w-md mx-auto w-full bg-white shadow-xl rounded-3xl px-3 md:px-5 lg:px-7 xl:px-10'>
           <div className='text-center mb-4'>
@@ -146,7 +150,6 @@ const Register = () => {
                   {showPass ? <FaEyeSlash /> : <FaEye />}
                 </span>
               </div>
-
             </div>
 
             {/* Terms and Conditions */}

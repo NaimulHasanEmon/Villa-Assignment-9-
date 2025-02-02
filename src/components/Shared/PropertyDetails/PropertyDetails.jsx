@@ -6,6 +6,7 @@ import { TbChartAreaFilled } from "react-icons/tb";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { BsTelephone } from "react-icons/bs";
 import PropertyMap from "../PropertyMap/PropertyMap";
+import { Helmet } from "react-helmet-async";
 
 const PropertyDetails = () => {
   const selectProperty = useLoaderData();
@@ -38,6 +39,9 @@ const PropertyDetails = () => {
 
   return (
     <div className='container mx-auto px-2 md:px-4 md:my-12'>
+      <Helmet>
+        <title>Elara Villa | {estate_title}</title>
+      </Helmet>
       {/* Upper Section */}
       <div className='flex flex-col md:flex-row shadow-lg rounded border-2 border-base-300'>
         {/* First upper part */}
@@ -46,7 +50,9 @@ const PropertyDetails = () => {
             <h1 className='text-xl md:text-2xl lg:text-3xl font-bold'>
               {estate_title}
             </h1>
-            <span className='badge badge-success text-xs md:text-base font-semibold'>{status}</span>
+            <span className='badge badge-success text-xs md:text-base font-semibold'>
+              {status}
+            </span>
           </div>
           {/* segment & location */}
           <div className='mt-4 space-y-2'>
@@ -70,7 +76,10 @@ const PropertyDetails = () => {
 
           <div className='flex flex-wrap gap-1 mt-2'>
             {facilities.map((facility, idx) => (
-              <div key={idx} className='badge badge-accent text-xs md:text-base font-semibold'>
+              <div
+                key={idx}
+                className='badge badge-accent text-xs md:text-base font-semibold'
+              >
                 {facility}
               </div>
             ))}
@@ -140,7 +149,9 @@ const PropertyDetails = () => {
               className='textarea textarea-bordered w-full xl:h-25'
               required
             ></textarea>
-            <button className='btn btn-primary h-8 mdh-10 w-full'>Send Message</button>
+            <button className='btn btn-primary h-8 mdh-10 w-full'>
+              Send Message
+            </button>
           </form>
         </div>
       </div>

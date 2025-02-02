@@ -1,9 +1,14 @@
+import { Helmet } from "react-helmet-async";
+
 const Properties = () => {
-    return (
-        <div>
-            <p>Properties here</p>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Elara Villa | Properties</title>
+      </Helmet>
+      <p>Properties here</p>
+    </div>
+  );
 };
 
 export default Properties;

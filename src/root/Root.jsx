@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Loader from "../components/Shared/Loader/Loader";
+import { Helmet } from "react-helmet-async";
 
 const Root = () => {
   const { loading } = useContext(AuthContext);
@@ -18,6 +19,9 @@ const Root = () => {
 
   return (
     <div className='max-w-[380px] md:max-w-[700px] lg:max-w-6xl mx-auto'>
+      <Helmet>
+        <title>Elara Villa | Home</title>
+      </Helmet>
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
